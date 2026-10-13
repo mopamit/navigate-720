@@ -16,3 +16,22 @@ footer{border:0;justify-content:center;margin-top:18px;padding:0}footer .text-bu
 @media(min-width:761px) and (max-height:800px){.brands{min-height:65px;padding-top:12px}.brands img{height:43px;width:185px}.menu-heading h1{font-size:42px}.menu-heading p{font-size:24px}.experience{margin-top:18px;gap:26px}.group-heading h2{font-size:30px}.card,.teacher .card{min-height:145px;padding:18px;gap:12px}.card-title{font-size:23px}.play{width:46px;height:46px;font-size:23px}.group+.group{margin-top:20px}.host img{height:350px}footer{margin-top:12px}}
 @media(max-width:760px){.brands{min-height:66px;padding:14px 5vw}.brands img,.brands #prismindLogo{width:140px;height:40px}main{padding:10px 5vw 20px}.menu-heading h1{font-size:32px;letter-spacing:-.6px}.menu-heading p{font-size:19px}.experience{grid-template-columns:1fr;gap:24px;margin-top:20px}.host{flex-direction:row;gap:14px}.host img{height:160px;width:115px}.speech{font-size:20px;white-space:normal;max-width:180px}.asset-note{min-height:100px;padding:15px;max-width:180px}.cards{gap:10px}.card,.teacher .card{padding:18px 10px;min-height:145px;gap:15px}.card-title{font-size:19px}.play{width:44px;height:44px;font-size:22px}.group-heading h2{font-size:27px}footer{align-items:center}.group+.group{margin-top:24px}}
 @media(max-width:430px){.cards{grid-template-columns:1fr}.card,.teacher .card{flex-direction:row;min-height:95px;padding:18px 24px;justify-content:space-between}.card-title{font-size:21px;text-align:right}.card-top{flex-shrink:0}.watched{bottom:4px;font-size:10px}footer .text-button{font-size:18px}}
+
+/* One stable viewport for the film and the interactive experience. */
+html,body{width:100%;height:100%;overflow:hidden}
+body>main{position:relative;width:100%;height:100dvh;max-width:none;margin:0;padding:0;overflow:hidden;background:#fff}
+#intro,#menu{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;box-sizing:border-box}
+#intro{background:#101015;overflow:hidden}
+#intro .intro-player{width:100%;height:100%;border-radius:0;background:#101015}
+#intro video{display:block;width:100%;height:100%;max-height:none;object-fit:contain}
+#skip{position:absolute;top:max(20px,env(safe-area-inset-top));left:max(24px,env(safe-area-inset-left));z-index:2;margin:0;padding:12px 22px;border-radius:30px;border:1px solid #ffffff80;background:#ffffffed;color:#292143;box-shadow:0 2px 14px #0002}
+#introError{position:absolute;bottom:90px;left:10%;right:10%;color:white;background:#252033;padding:14px;border-radius:12px}
+#menu{overflow-y:auto;overflow-x:hidden;padding:0 4vw 16px;animation:screen-reveal .4s ease-out}
+#menu .brands{padding:14px 0 8px;min-height:65px}
+#menu .experience{margin-top:18px}
+#menu footer{margin-top:12px}
+@keyframes screen-reveal{from{opacity:0}to{opacity:1}}
+@media(min-width:761px) and (min-height:801px){#menu{display:flex;flex-direction:column}#menu .experience{flex:1;align-content:center}#menu .brands{width:100%;max-width:none}#menu .host{justify-content:center}}
+@media(max-width:760px){#menu{padding:0 5vw 18px}#menu .brands{padding:14px 0}#skip{top:16px;left:16px;padding:10px 16px}}
+@media(prefers-reduced-motion:reduce){#menu{animation:none}}
+@media(min-width:761px) and (max-width:1050px){#menu .experience{grid-template-columns:minmax(155px,.8fr) 3fr;gap:20px}#menu .card,#menu .teacher .card{padding:14px 10px;min-height:132px}#menu .card-title{font-size:19px}#menu .speech{white-space:normal;font-size:20px}#menu .host img{height:300px}#menu .menu-heading h1{font-size:36px}#menu .menu-heading p{font-size:21px}#menu .cards{gap:12px}#menu .group+.group{margin-top:16px}#menu .group-heading h2{font-size:27px}}
