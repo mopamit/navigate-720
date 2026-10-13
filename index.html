@@ -2,6 +2,7 @@
 <html lang="he" dir="rtl">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NaviGate | בואו להכיר</title><link rel="stylesheet" href="style.css"><script defer src="config.js"></script><script defer src="app.js"></script></head>
 <body data-screen="intro">
+  <header class="brands"><img id="navigateLogo" alt="NaviGate"><span class="program">720 אנגלית</span><img id="prismindLogo" alt="Prismind" hidden></header>
 
   <main>
     <section id="intro" aria-label="סרטון פתיחה" class="intro">
@@ -10,7 +11,7 @@
       <button id="skip" class="text-button">לסרטוני ההדרכה <span aria-hidden="true">←</span></button>
     </section>
     <section id="menu" hidden aria-labelledby="menuTitle">
-  <header class="brands"><img id="navigateLogo" alt="NaviGate"><span class="program">תכנית 720 אנגלית</span><img id="prismindLogo" alt="Prismind" hidden></header>
+
       <div class="menu-heading"><span class="eyebrow">מערכת אחת. שתי זוויות.</span><h1 id="menuTitle" tabindex="-1">רוצים להכיר את <bdi>NaviGate</bdi>?</h1><p>בחרו נושא ולחצו עליו לצפייה בסרטון ההדרכה</p></div>
       <div class="experience"><aside class="host"><p class="speech">בואו איתי, נכיר את המערכת!</p><img id="buddy" alt="באדי הסגול, המארח שלכם" hidden><p id="buddyMissing" class="asset-note">הדמות המקורית של באדי תופיע כאן<br>לאחר צירוף קובץ המקור</p></aside>
         <div class="groups"><section class="group student" aria-labelledby="studentTitle"><div class="group-heading"><h2 id="studentTitle">זווית התלמיד</h2><span>לגלות. לתרגל. להתקדם.</span></div><div id="studentCards" class="cards"></div></section><section class="group teacher" aria-labelledby="teacherTitle"><div class="group-heading"><h2 id="teacherTitle">זווית המורה</h2><span>להכיר. להבין. להתאים.</span></div><div id="teacherCards" class="cards"></div></section></div>
@@ -20,6 +21,7 @@
   </main>
   <dialog id="viewer" aria-labelledby="viewerTitle"><div class="viewer-header"><h2 id="viewerTitle"></h2><button id="back" class="back">חזרה לכל הסרטונים <span aria-hidden="true">×</span></button></div><video id="tutorialVideo" controls playsinline hidden></video><div id="comingSoon" class="coming-soon"><span class="large-play" aria-hidden="true">▷</span><p>סרטון ההדרכה יתווסף בקרוב</p></div><p id="tutorialError" role="status" hidden>לא ניתן לטעון את הסרטון. נסו שוב מאוחר יותר.</p></dialog>
 </body></html>
+
 
 
 
